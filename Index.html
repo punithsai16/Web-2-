@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Your CSS styles here */
+        /* ... */
+    </style>
+    <title>Vowel, Consonant, and Tip Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Vowel and Consonant Counter</h1>
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" placeholder="Type your string here">
+        <button onclick="countVowelsAndConsonants()">Count</button>
+        <p id="result"></p>
+    </div>
+
+    <div class="container">
+        <h1>Palindrome Checker</h1>
+        <label for="numberInput">Enter a series of numbers:</label>
+        <input type="text" id="numberInput" placeholder="e.g., 12321">
+        <button onclick="checkPalindrome()">Check Palindrome</button>
+        <p id="palindromeResult"></p>
+    </div>
+
+    <div class="container">
+        <h1>Tip Calculator</h1>
+        <label for="subtotalInput">Subtotal ($):</label>
+        <input type="number" id="subtotalInput" placeholder="Enter subtotal">
+        <label for="tipPercentageInput">Tip Percentage (%):</label>
+        <input type="number" id="tipPercentageInput" placeholder="Enter tip percentage">
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <p id="totalAmount"></p>
+    </div>
+
+    <script>
+        function countVowelsAndConsonants() {
+            // Your existing vowel and consonant counting logic here
+            // ...
+        }
+
+        function checkPalindrome() {
+            // Your existing palindrome checking logic here
+            // ...
+        }
+
+        function calculateTotal() {
+            const subtotal = parseFloat(document.getElementById("subtotalInput").value);
+            const tipPercentage = parseFloat(document.getElementById("tipPercentageInput").value);
+            const tipAmount = (subtotal * tipPercentage) / 100;
+            const totalAmount = subtotal + tipAmount;
+            document.getElementById("totalAmount").textContent = "Total Amount: $" + totalAmount.toFixed(2);
+        }
+    </script>
+</body>
+</html>
